@@ -17,13 +17,21 @@ class Data:
     # return one record from array
     @classmethod
     def return_data(cls, request=False, gos_org=False):
-        id = random.randint(1, 179)
+
         try:
             conn = sqlite3.connect('sd.db')
         except:
             print('Не удалось открыть БД!')
             time.sleep(5)
         cursor = conn.cursor()
+        try:
+            c=cursor.execute("""
+            SELECT count(request) FROM sd
+            """)
+            count = c.fetchone()
+            id = random.randint(1, count[0]+1)
+        except:
+            print('Не удалось посчитать количество строк в таблице sd')
         if request:
             try:
                 req = cursor.execute(f"""
