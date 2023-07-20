@@ -9,7 +9,7 @@
 3. Запустить CMD
 4. Подключить интернет без прокси и сертификата!
 5. Ввести команды:	
-	pip install selenium
+	pip install selenium==4.3.0
 	pip install openpyxl
 	pip install selenium-stealth
 
