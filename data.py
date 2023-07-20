@@ -99,7 +99,7 @@ class Data:
         print("Не удалось прочитать файл login.txt")
 
     XPATH = '/html/body/div[1]/div[2]/main/div[2]/div[2]/div[2]/div/div/'
-    PATH = "C:\Pyton\SD\sd_with_bd_sql\chromedriver.exe"
+    PATH = "C:\Python\SD\sd_with_bd_sql\chromedriver.exe"
     url = [
         "https://sd.nitec.kz/pages/UI.php",
         "https://sd.nitec.kz/pages/UI.php?operation=new&class=UserRequest&c%5Borg_id%5D=1&c%5Bmenu%5D=NewUserRequest"
